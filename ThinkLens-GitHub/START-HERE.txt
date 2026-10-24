@@ -1,0 +1,62 @@
+THINKLENS — PRESENTATION DEMO
+
+Double-click Start-ThinkLens.cmd and open http://127.0.0.1:8765/ThinkLens.html.
+Live AI uses your ChatGPT account through Codex CLI. Run codex login once and
+finish signing in, then click Check connection in the app. No API key is needed.
+For offline use, open ThinkLens.html directly and select Offline demo.
+See README.txt for project setup, privacy, limits, and test instructions.
+
+ARTICLE LINK IMPORT
+1. Double-click Start-ThinkLens.cmd and leave its window running.
+   It uses the bundled Python runtime on this computer, or Python 3 via py.
+   Alternatively run: python server.py (from this folder, with Python 3 installed).
+2. Open http://127.0.0.1:8765/ThinkLens.html in your browser.
+3. Paste a public article URL into “Or paste an article link”.
+4. Click “Import & analyze”. It fetches readable text and analyzes automatically.
+5. Review the extracted text and source link. You can edit and analyze again.
+
+Link importing and live AI require internet and server.py; opening the HTML file alone
+supports only Offline demo mode. The server is already running for the current demo.
+Imports contact the article website, which can see the request and network address.
+ThinkLens does not permanently store or log the imported text or URLs.
+Sign-in, paywall, JavaScript-only, and access-blocked pages may not import or may
+return only a preview. PDF files are unsupported. Paste article text in those cases.
+Long articles are shortened to fit the 12,000-character limit and labeled accordingly.
+Extraction normalizes whitespace, may omit text, and may include unrelated text.
+Offline demo has limited vocabulary and can return zero findings even when an
+article contains persuasive language. Live AI can also miss cues or misinterpret
+language. Neither mode performs external fact-checking.
+
+60–90 SECOND PRESENTATION
+1. “ThinkLens helps readers notice how language may influence them.”
+2. Choose Live AI if signed in, or Offline demo. The fictional speech is already
+   loaded. Click “Explore the language” and wait for the result.
+3. Click “Everyone knows”. Explain how a claim of consensus can shape a reader’s perception.
+4. Click “our entire future will be at risk”. Show the possible effect, reflection question, and alternative interpretation.
+5. Click a category below the highlighted text to filter it; click “Show all” to reset.
+6. Choose “Neutral text” and analyze again to show a result with no matches.
+7. “ThinkLens explains observable language and possible effects. It cannot establish
+   someone’s true intentions from text alone.” State which engine you demonstrated:
+   Live AI uses the model; Offline demo uses a fixed phrase list.
+
+SCOPE
+REAL ARTICLE OPTION
+Choose “Real article”, then “Explore the language”. The app includes a short,
+exact opening excerpt from a Guardian opinion editorial published 5 December 2018.
+Its source link opens the full article. In Offline demo, click the three highlights to discuss
+dismissive labeling, broad consensus language, and emphasis on danger.
+The full article provides context beyond this single sentence. The demo describes
+rhetorical wording; it does not assess climate science or the author's intentions.
+For the presentation, explain that 100% means one of one excerpted sentences
+matched rules. It says nothing about the rest of the article.
+
+SIMPLIFIED BUILD
+This simplifies the colleague’s full-stack specification into an HTML app and a
+small Python standard-library server for article imports and live Codex analysis.
+It includes editable text, four fictional samples, a real editorial excerpt, phrase highlighting, explanations,
+category filters, calculated sentence statistics, and responsible-use information.
+The live provider is Codex with ChatGPT sign-in. There is no IBM connection,
+database, export, or external fact-checking.
+Sentence segmentation uses the browser’s built-in English Intl.Segmenter.
+The rule list is deliberately small. Unmatched wording produces no findings;
+that does not mean it contains no persuasion. Refreshing resets all text/results.

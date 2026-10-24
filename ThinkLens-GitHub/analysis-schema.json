@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "quote": {
+            "type": "string"
+          },
+          "context_before": {
+            "type": "string"
+          },
+          "context_after": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "general",
+              "loaded",
+              "fear",
+              "dilemma",
+              "authority",
+              "exaggeration",
+              "social",
+              "labeling",
+              "emotional",
+              "framing",
+              "unsupported",
+              "repetition"
+            ]
+          },
+          "why": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string"
+          },
+          "alternative": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Linguistic observation",
+              "Context required",
+              "External verification required"
+            ]
+          }
+        },
+        "required": [
+          "quote",
+          "context_before",
+          "context_after",
+          "category",
+          "why",
+          "effect",
+          "question",
+          "alternative",
+          "status"
+        ]
+      }
+    }
+  },
+  "required": [
+    "summary",
+    "findings"
+  ]
+}
